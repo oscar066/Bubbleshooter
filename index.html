@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta charset="utf8">
+        <meta charset="utf-8">
         <title> Bubble Shooter </title>
         <link href="_css/main.css" rel="stylesheet">
-        <script href="_js/modernizr.js"></script>
+        <link href="_css/game.css" rel="stylesheet">
+        <script src="_js/modernizr.js"></script>
         <script>
             Modernizr.load([{
                 load: "//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js",
                 complete: function() {
-                    if(!window.JQuery){
+                    if(!window.jQuery){
                         Modernizr.load("_js/jquery-1.8.2.min.js");
                     }
                 },
@@ -30,7 +31,9 @@
     <body>
         <div id="page">
             <div id="top_bar"></div>
-            <div id="game"></div>
+            <div id="game">
+                <div id="board"></div>
+            </div>
             <div id="footer_bar"></div>
             <div id="start_game" class="dialog">
                 <div id="start_game_message">
