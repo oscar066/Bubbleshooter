@@ -8,14 +8,17 @@
         <script src="_js/modernizr.js"></script>
         <script>
             Modernizr.load([{
-                load: "//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js",
+                load: "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js",
                 complete: function() {
                     if(!window.jQuery){
-                        Modernizr.load("_js/jquery-1.8.2.min.js");
+                        Modernizr.load("_js/jquery-1.11.2.min.js");
                     }
                 },
             },
             "_js/ui.js",
+            "_js/bubble.js",
+            "_js/board.js",
+            "_js/collision-detector.js",
             {
                 load: "_js/game.js",
                 complete: function(){
@@ -33,6 +36,7 @@
             <div id="top_bar"></div>
             <div id="game">
                 <div id="board"></div>
+                <div id="bubbles_remaining"></div>
             </div>
             <div id="footer_bar"></div>
             <div id="start_game" class="dialog">
